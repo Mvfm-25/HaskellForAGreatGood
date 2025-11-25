@@ -13,3 +13,10 @@ dobreNos x y = dobreMe x + dobreMe y
 dobreNumeroPequeno x = if x >= 100
                         then x
                         else dobreMe x
+
+-- Recebendo lista como parâmetro.
+-- Caso lista vazia, NADA!
+-- Senão, retorna primeiro elemento.
+primeiroElemento :: [a] -> Maybe a
+primeiroElemento []    = Nothing
+primeiroElemento (x:_) = Just x
