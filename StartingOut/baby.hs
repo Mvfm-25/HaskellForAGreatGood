@@ -20,3 +20,7 @@ dobreNumeroPequeno x = if x >= 100
 primeiroElemento :: [a] -> Maybe a
 primeiroElemento []    = Nothing
 primeiroElemento (x:_) = Just x
+
+-- Método para verificar palíndromos.
+ePalindromo :: String -> Bool
+ePalindromo str = str == reverse str
