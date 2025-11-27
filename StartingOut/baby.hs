@@ -3,6 +3,9 @@
 -- 
 -- Criado : 25/11/2025  || Última modificação : 25/11/2025
 
+-- Importando só para o método 'ePalindromo'
+import Data.Char (toLower)
+
 -- Primeira função.
 dobreMe x = x + x 
 
@@ -23,4 +26,6 @@ primeiroElemento (x:_) = Just x
 
 -- Método para verificar palíndromos.
 ePalindromo :: String -> Bool
-ePalindromo str = str == reverse str
+ePalindromo str = 
+  let normalizada = map toLower (filter (/= ' ') str)
+  in normalizada == reverse normalizada
